@@ -19,8 +19,11 @@ const FeaturedHotels = () => {
           {[1,2,3,4].map((el) => (
             <div key={el} className="bg-white rounded-xl drop-shadow-md">
 
-              <div className="room_image">
+              <div className="room_image relative">
                 <img src={roomImage} className='w-full h-50' alt="room" />
+                <span className="absolute top-4 left-4 w-fit px-3 py-1 bg-white rounded-full text-xs text-[#1F2937]">
+                  Best Seller
+                </span>
               </div>
 
               <div className="content py-6 px-4 space-y-4">

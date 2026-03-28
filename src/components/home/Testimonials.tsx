@@ -29,11 +29,9 @@ const Testimonials = () => {
               </div>
 
               <div className="flex gap-1">
-                <Star size={20} className='fill-[#F8701B] text-transparent' /> 
-                <Star size={20} className='fill-[#F8701B] text-transparent' /> 
-                <Star size={20} className='fill-[#F8701B] text-transparent' /> 
-                <Star size={20} className='fill-[#F8701B] text-transparent' /> 
-                <Star size={20} className='fill-[#F8701B] text-transparent' /> 
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <Star key={index} size={20} className='fill-[#F8701B] text-transparent' /> 
+                ))}
               </div>
 
               <p className='text-[#374151A1] text-sm max-w-72'>

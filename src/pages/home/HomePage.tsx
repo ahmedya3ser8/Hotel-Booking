@@ -1,4 +1,4 @@
-import { ExclusiveOffers, FeaturedHotels, Hero, Testimonials } from "@/components/index";
+import { ExclusiveOffers, FeaturedHotels, Hero, NewsLetter, Testimonials } from "@/components/index";
 
 const HomePage = () => {
   return (
@@ -7,6 +7,7 @@ const HomePage = () => {
       <FeaturedHotels />
       <ExclusiveOffers />
       <Testimonials />
+      <NewsLetter />
     </>
   )
 }

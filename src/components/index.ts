@@ -4,3 +4,7 @@ export { default as Hero } from './home/Hero';
 export { default as FeaturedHotels } from './home/FeaturedHotels';
 export { default as ExclusiveOffers } from './home/ExclusiveOffers';
 export { default as Testimonials } from './home/Testimonials';
+export { default as NewsLetter } from './home/NewsLetter';
+export { default as HotelTitle } from './hotels/HotelTitle';
+export { default as HotelRoomList } from './hotels/HotelRoomList';
+export { default as RoomCard } from './hotels/RoomCard';
