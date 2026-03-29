@@ -1,5 +1,5 @@
 
-const HotelTitle = () => {
+const RoomTitle = () => {
   return (
     <div className="pt-32">
       <div className="container">
@@ -14,4 +14,4 @@ const HotelTitle = () => {
   )
 }
 
-export default HotelTitle;
+export default RoomTitle;

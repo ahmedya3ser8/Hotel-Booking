@@ -1,12 +1,20 @@
 import { Coffee, MapPin, Star, Utensils, Wifi } from 'lucide-react';
 
 import roomImage from '@assets/room-1.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const RoomCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='flex gap-6 border-b last:border-none border-b-[#6B72804D] pb-7'>
 
-      <img src={roomImage} className='w-full max-h-65 md:w-1/2 shadow-lg object-cover rounded-2xl' alt="room" />
+      <img 
+        onClick={() => navigate(`/rooms/1`)} 
+        src={roomImage} 
+        className='w-full max-h-65 md:w-1/2 shadow-lg object-cover rounded-2xl cursor-pointer' 
+        alt="room" 
+      />
 
       <div className="content flex flex-col gap-4 py-4">
 

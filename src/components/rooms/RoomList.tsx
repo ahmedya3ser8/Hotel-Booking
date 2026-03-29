@@ -1,6 +1,6 @@
 import RoomCard from "./RoomCard";
 
-const HotelRoomList = () => {
+const RoomList = () => {
   return (
     <section className="py-10">
       <div className="container">
@@ -20,8 +20,9 @@ const HotelRoomList = () => {
                 CLEAR
               </button>
             </div>
-            
+
             <div className="filter_body px-4 py-6 space-y-4">
+              
               <div className="space-y-4">
                 <h4 className="font-medium text-sm"> Popular filters </h4>
                 <div className="space-y-2">
@@ -51,6 +52,7 @@ const HotelRoomList = () => {
                   </div>
                 </div>
               </div>
+
               <div className="space-y-4">
                 <h4 className="font-medium text-sm"> Price Range </h4>
                 <div className="space-y-2">
@@ -80,6 +82,7 @@ const HotelRoomList = () => {
                   </div>
                 </div>
               </div>
+
               <div className="space-y-4">
                 <h4 className="font-medium text-sm"> Sort By </h4>
                 <div className="space-y-2">
@@ -103,6 +106,7 @@ const HotelRoomList = () => {
                   </div>
                 </div>
               </div>
+
             </div>
 
           </div>
@@ -113,4 +117,4 @@ const HotelRoomList = () => {
   )
 }
 
-export default HotelRoomList;
+export default RoomList;

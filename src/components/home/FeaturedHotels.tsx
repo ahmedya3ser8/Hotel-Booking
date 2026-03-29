@@ -1,6 +1,7 @@
 import { MapPin, Star } from 'lucide-react';
 
 import roomImage from '@assets/room-1.jpg';
+import { Link } from 'react-router-dom';
 
 const FeaturedHotels = () => {
   return (
@@ -50,9 +51,9 @@ const FeaturedHotels = () => {
                     $450 / 
                     <span className='text-[#6B7280E3] text-sm'> night </span>
                   </div>
-                  <button className='border border-[#D9D9D9] text-sm font-medium py-2 px-4 rounded-sm cursor-pointer transition duration-300 hover:bg-gray-50'> 
+                  <Link to={`/rooms/${el}`} className='border border-[#D9D9D9] text-sm font-medium py-2 px-4 rounded-sm cursor-pointer transition duration-300 hover:bg-gray-50'> 
                     View Details 
-                  </button>
+                  </Link>
                 </div>
 
               </div>
