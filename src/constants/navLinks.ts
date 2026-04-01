@@ -1,7 +1,7 @@
 export const navLinks = [
   { label: 'Home', pathName: '/' },
   { label: 'Rooms', pathName: 'rooms' },
-  { label: 'Experiences', pathName: 'experiences' },
+  { label: 'Booking', pathName: 'booking' },
   { label: 'About', pathName: 'about' },
   { label: 'Dashboard', pathName: 'dashboard' },
 ];

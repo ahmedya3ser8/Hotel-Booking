@@ -1,16 +1,24 @@
 export { default as Header } from './common/header/Header';
 export { default as Footer } from './common/footer/Footer';
+
 export { default as Hero } from './home/Hero';
 export { default as FeaturedHotels } from './home/FeaturedHotels';
 export { default as ExclusiveOffers } from './home/ExclusiveOffers';
 export { default as Testimonials } from './home/Testimonials';
 export { default as NewsLetter } from './home/NewsLetter';
+
 export { default as RoomTitle } from './rooms/RoomTitle';
 export { default as RoomList } from './rooms/RoomList';
 export { default as RoomCard } from './rooms/RoomCard';
+
 export { default as RoomDetailsHeader } from './room-details/RoomDetailsHeader';
 export { default as RoomDetailsGallery } from './room-details/RoomDetailsGallery';
 export { default as RoomDetailsInfo } from './room-details/RoomDetailsInfo';
 export { default as RoomDetailsForm } from './room-details/RoomDetailsForm';
 export { default as RoomSpecification } from './room-details/RoomSpecification';
 export { default as RoomHost } from './room-details/RoomHost';
+
+export { default as BookingHeader } from './booking/BookingHeader';
+export { default as BookingList } from './booking/BookingList';
+
+export { default as AuthModal } from './auth-modal/AuthModal';
