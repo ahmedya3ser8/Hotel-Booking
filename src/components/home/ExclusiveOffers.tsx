@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-import offerImg from '@assets/offer-1.jpg';
+import offerImg from '@/assets/offer-1.jpg';
 
 const ExclusiveOffers = () => {
   return (

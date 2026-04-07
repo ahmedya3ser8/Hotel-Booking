@@ -1,4 +1,4 @@
-import { RoomList, RoomTitle } from "@components/index";
+import { RoomList, RoomTitle } from "@/components";
 
 const RoomPage = () => {
   return (

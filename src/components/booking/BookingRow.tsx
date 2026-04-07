@@ -1,6 +1,6 @@
 import { MapPin, Users } from 'lucide-react';
 
-import roomImgae from '@assets/room-1.jpg';
+import roomImgae from '@/assets/room-1.jpg';
 
 const BookingRow = () => {
   return (

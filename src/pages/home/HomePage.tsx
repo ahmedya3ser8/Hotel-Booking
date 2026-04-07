@@ -1,4 +1,10 @@
-import { ExclusiveOffers, FeaturedHotels, Hero, NewsLetter, Testimonials } from "@/components/index";
+import { 
+  ExclusiveOffers, 
+  FeaturedHotels, 
+  Hero, 
+  NewsLetter, 
+  Testimonials 
+} from "@/components";
 
 const HomePage = () => {
   return (

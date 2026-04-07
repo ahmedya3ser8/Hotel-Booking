@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import facebook from '@assets/facebook.svg';
-import instagram from '@assets/instagram.svg';
-import linkedin from '@assets/linkedin.svg';
-import twitter from '@assets/twitter.svg';
-import logoImage from '@assets/logo.svg';
+import facebook from '@/assets/facebook.svg';
+import instagram from '@/assets/instagram.svg';
+import linkedin from '@/assets/linkedin.svg';
+import twitter from '@/assets/twitter.svg';
+import logoImage from '@/assets/logo.svg';
 
 const Footer = () => {
   return (

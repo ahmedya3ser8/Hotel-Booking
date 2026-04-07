@@ -1,15 +1,22 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Lock, LogOut, User } from 'lucide-react';
 
-import logoImage from '@assets/logo.svg';
-import { navLinks } from '@constants/navLinks';
-import { AuthModal } from '@components/index';
-import type { AuthMode } from '@/utils/types';
+import avatarImage from '@/assets/avatar.jpg';
+import logoImage from '@/assets/logo.svg';
+
+import { navLinks } from '@/constants/navLinks';
+import { ChangePasswordModal, ProfileModal } from '@/components';
+import { useAuthStore } from '@/store/authStore';
 
 const Header = () => {
+  const { isAuthenticated, logout, user, updateUser, loading, updateProfile, isUpdateProfile, updatePassword } = useAuthStore();
+  const navigate = useNavigate();
+
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-  const [mode, setMode] = useState<AuthMode>('login');
+  const [openMenu, setOpenMenu] = useState(false);
+  const [changePasswordModal, setChangePasswordModal] = useState(false);
+  const [profileModal, setProfileModal] = useState(false);
   const location = useLocation();
 
   const homePath = location.pathname === '/';
@@ -27,6 +34,7 @@ const Header = () => {
 
   return (
     <>
+
       <header className={`fixed top-0 left-0 w-full transition-all duration-500 z-50 ${!homePath && 'bg-white/80 shadow-md backdrop-blur-lg py-3 md:py-4' } ${isScrolled ? 'bg-white/80 shadow-md backdrop-blur-lg py-3 md:py-4' : 'py-4 md:py-6' }`}>
         <div className="container">
           <div className="flex items-center justify-between">
@@ -46,20 +54,59 @@ const Header = () => {
               ))}
             </ul>
 
-            <button onClick={() => { setMode('login'); setOpenModal(true);}} className='w-24 h-10 rounded-full bg-[#18181B] font-medium text-white text-sm cursor-pointer'>
+            {isAuthenticated ? (
+              <div className='relative'>
+                <div onClick={() => setOpenMenu(prev => !prev)} className='size-10 bg-[#A1AEBF] overflow-hidden rounded-full cursor-pointer'>
+                  <img src={user?.profileImage || avatarImage} className='w-full h-full' alt="avatar-Image" />
+                </div>
+                {openMenu && (
+                  <ul className='bg-gray-50 w-50 text-gray-700 rounded-md drop-shadow-md absolute right-0 mt-5'>
+                    <li onClick={() => { setOpenMenu(prev => !prev); setProfileModal(prev => !prev)}} className='flex items-center gap-2 p-3 transition duration-300 hover:bg-gray-200 cursor-pointer'>
+                      <User size={16} />
+                      Profile
+                    </li>
+                    <li onClick={() => { setOpenMenu(prev => !prev); setChangePasswordModal(prev => !prev)}} className='flex items-center gap-2 p-3 transition duration-300 hover:bg-gray-200 cursor-pointer'>
+                      <Lock size={16} />
+                      Change Password
+                    </li>
+                    <li>
+                      <Link onClick={() => { setOpenMenu(prev => !prev); logout(navigate) }} to='/login' className='flex items-center gap-2 p-3 transition duration-300 hover:bg-gray-200 cursor-pointer'>
+                        <LogOut size={16} />
+                        Logout
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            ) : (
+            <Link to='/login'  className='w-24 h-10 rounded-full bg-[#18181B] font-medium text-white text-sm cursor-pointer flex justify-center items-center'>
               Login
-            </button>
+            </Link>
+            )}
 
           </div>
         </div>
       </header>
-      {openModal && (
-        <AuthModal 
-          mode={mode}
-          setMode={setMode}
-          onClose={() => setOpenModal(false)}
+
+      {changePasswordModal && (
+        <ChangePasswordModal 
+          setChangePasswordModal={setChangePasswordModal} 
+          updatePassword={updatePassword}
+          loading={loading}
         />
       )}
+
+      {profileModal && (
+        <ProfileModal 
+          setProfileModal={setProfileModal} 
+          user={user!} 
+          updateUser={updateUser} 
+          loading={loading} 
+          isUpdateProfile={isUpdateProfile}
+          updateProfile={updateProfile}
+        />
+      )}
+
     </>
   )
 }

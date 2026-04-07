@@ -2,7 +2,7 @@ import { Calendar, MapPin, Search } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="bg-[url('@assets/hero.jpg')] bg-cover bg-center bg-no-repeat h-screen">
+    <section className="bg-[url('@/assets/hero.jpg')] bg-cover bg-center bg-no-repeat h-screen">
       <div className="container flex flex-col gap-8 justify-center h-full text-white">
 
         <div className="space-y-4">

@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react';
 
-import avatarImage from '@assets/avatar.jpg';
+import avatarImage from '@/assets/avatar.jpg';
 
 const RoomHost = () => {
   return (

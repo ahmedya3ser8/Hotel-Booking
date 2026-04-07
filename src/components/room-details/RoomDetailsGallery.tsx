@@ -1,4 +1,4 @@
-import mainImage from '@assets/room-1.jpg';
+import mainImage from '@/assets/room-1.jpg';
 
 const RoomDetailsGallery = () => {
   return (

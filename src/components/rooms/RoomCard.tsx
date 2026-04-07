@@ -1,6 +1,6 @@
 import { Coffee, MapPin, Star, Utensils, Wifi } from 'lucide-react';
 
-import roomImage from '@assets/room-1.jpg';
+import roomImage from '@/assets/room-1.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const RoomCard = () => {

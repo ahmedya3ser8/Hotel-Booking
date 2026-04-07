@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react';
 
-import avatar from '@assets/avatar.jpg';
+import avatar from '@/assets/avatar.jpg';
 
 const Testimonials = () => {
   return (

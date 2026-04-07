@@ -1,6 +1,6 @@
 import { MapPin, Star } from 'lucide-react';
 
-import roomImage from '@assets/room-1.jpg';
+import roomImage from '@/assets/room-1.jpg';
 import { Link } from 'react-router-dom';
 
 const FeaturedHotels = () => {

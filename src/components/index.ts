@@ -21,4 +21,5 @@ export { default as RoomHost } from './room-details/RoomHost';
 export { default as BookingHeader } from './booking/BookingHeader';
 export { default as BookingList } from './booking/BookingList';
 
-export { default as AuthModal } from './auth-modal/AuthModal';
+export { default as ChangePasswordModal } from './change-password-modal/ChangePasswordModal';
+export { default as ProfileModal } from './profile-modal/ProfileModal';
